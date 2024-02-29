@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>게시물 작성폼</title>
+
+    <style>
+        .layout{
+            width: 500px;
+            margin: 0 auto;
+        }
+        .layout > input{
+            width: 100%;
+            box-sizing: border-box;
+        margin-top:  10px;
+        }
+        .layout textarea{
+            width: 100%;
+            margin-top: 10px;
+            min-height:300px;
+        }
+
+    </style>
+</head>
+
+
+<!--submit 을눌렀을때 form 안에있는 2가지 데이터가 post방식으로 넘어갑니다 name에 있는거 2개 -->
+<body>
+    <div class="layout">
+        <form action="/writeProc" method="post">
+            <input name="title" type="text">
+            <textarea name="content"></textarea>
+            <button type="submit">작성</button>
+        </form>
+    </div>
+
+
+
+</body>
+</html>

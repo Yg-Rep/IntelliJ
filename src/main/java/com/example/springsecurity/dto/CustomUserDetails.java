@@ -8,6 +8,9 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 public class CustomUserDetails implements UserDetails {
+    //UserDetails implements
+    //임플리먼트 메소드를 통해 구현해두자.
+    //db기반 로그인 검증로직
 
     private UserEntity userEntity;
 
@@ -19,7 +22,7 @@ public class CustomUserDetails implements UserDetails {
     public Collection<? extends GrantedAuthority> getAuthorities() {
 
         Collection<GrantedAuthority> collection = new ArrayList<>();
-        //Collection 객체에다가
+        //Collection 클래스 선언해주고 GrantedAuthority라고 내부타입 지정을해주고 collection 객체를 생성한다.
         collection.add(new GrantedAuthority() {
             @Override
             public String getAuthority() {

@@ -1,14 +1,72 @@
 <!doctype html>
-<html lang="en">
+<html lang="UTF-8">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>main</title>
-</head>
-<body>
-Hello Secure!
 
+
+<style>
+.alert-box{
+    background-color: blue;
+    padding: 20px;
+    border-radius: 5px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="alert-box" id="alert">
+    <p>XO's Menual</p>
+<button onclick="show('none')">닫기</button>
+</div>
+<button onclick="show('block')">열기</button>
+<div class="alert-box" id="idpw">
+    <p id="Place">Hi</p>
+<button onclick="ftwo('ID입력필요')">btn1</button>
+    <button onclick="ftwo('PW입력필요')">btn2</button>
+</div>
+
+<button href="/board">board로가자</button>
+<button id="openA">전체열기</button><button id="closeA">close</button>
+
+
+
+<script>
+
+
+    function addEvent(){
+        document.getElementById('closeA').addEventListener('click',function (alert,place,idpw){
+            document.getElementById('alert').style.display='none';
+            document.getElementById('place').style.display='none';
+            document.getElementById('idpw').style.display='none';
+        })
+    }
+    function addEvent2(){
+        document.getElementById('openA').addEventListener('click',function (alert,place,idpw){
+            document.getElementById('alert').style.display='block';
+            document.getElementById('place').style.display='block';
+            document.getElementById('idpw').style.display='block';
+        })
+    }
+
+
+
+    function show(e){
+        document.getElementById('alert').style.display=e;
+    }
+
+    function ftwo(e){
+        document.getElementById('Place').innerText=e;
+    }
+
+</script>
+
+<hr>
+{{id}}
+{{role}}
 </body>
 </html>
